@@ -1,0 +1,23 @@
+# AFSIM 引擎安装目录(商业软件,体积约 5GB,不应入库)
+afsim2.9.0/
+
+# 仿真输出文件
+output/
+*.evt
+*.rep
+*.replay
+*.log
+*.bin
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 编辑器 / 操作系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
