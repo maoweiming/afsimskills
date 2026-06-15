@@ -11,6 +11,14 @@ import os
 import argparse
 from pathlib import Path
 
+# Ensure Chinese (and other non-ASCII) output is not mangled by the Windows
+# console code page (e.g. GBK/cp936) when re-printing captured UTF-8 text.
+for _stream in (sys.stdout, sys.stderr):
+    try:
+        _stream.reconfigure(encoding="utf-8", errors="replace")
+    except (AttributeError, ValueError):
+        pass  # Older Python or non-reconfigurable stream; ignore.
+
 def load_config():
     """
     Load AFSIM configuration from config.txt
@@ -90,11 +98,17 @@ def run_mission(script_file, options=None, config=None):
         print(f"ERROR: Script file not found: {script_file}", file=sys.stderr)
         return 1, "", f"Script file not found: {script_file}"
 
+    # Run from the script's own directory so that relative paths inside the
+    # script (e.g. output/...) resolve correctly. Pass only the basename to
+    # mission.exe so the directory is not applied twice (cwd + relative path).
+    work_dir = os.path.dirname(os.path.abspath(script_file)) or "."
+    script_name = os.path.basename(script_file)
+
     # Build command
     cmd = [mission_exe]
     if options:
         cmd.extend(options)
-    cmd.append(script_file)
+    cmd.append(script_name)
 
     print(f"AFSIM Configuration:")
     print(f"  Install Dir: {config['afsim_install_dir']}")
@@ -110,7 +124,9 @@ def run_mission(script_file, options=None, config=None):
             cmd,
             capture_output=True,
             text=True,
-            cwd=os.path.dirname(os.path.abspath(script_file)) or "."
+            encoding="utf-8",
+            errors="replace",
+            cwd=work_dir
         )
 
         # Print output
