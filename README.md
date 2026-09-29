@@ -66,8 +66,8 @@
 **方式 1：从 GitHub 克隆**
 
 ```bash
-git clone https://github.com/lookingforfeng/afsim-script-generator.git
-cd afsim-script-generator
+git clone https://github.com/maoweiming/afsimskills.git
+cd afsimskills
 ```
 
 **方式 2：直接下载**
@@ -446,8 +446,8 @@ afsim-script-generator/                    # AFSIM 脚本生成器 Claude Code S
 │
 ├── assets/                                # 资源文件目录
 │   ├── template.wsf                       # AFSIM 脚本模板
-│   ├── wechat_contact.jpg                 # 微信联系方式二维码
-│   └── wechat_reward.jpg                  # 微信赞赏码
+│   ├── wechat_contact.png                 # 微信联系方式二维码
+│   └── wechat_reward.png                 # 微信赞赏码
 │
 ├── references/                            # 参考文档目录（完整系统化）
 │   ├── common_mistakes.md                 # ⭐ 10条关键规则和常见错误（必读）
@@ -642,13 +642,13 @@ afsim-script-generator/                    # AFSIM 脚本生成器 Claude Code S
 ## 🔗 相关链接
 
 - [AFSIM 官方网站](https://github.com/afsim/afsim)
-- [项目仓库](https://github.com/lookingforfeng/afsim-script-generator)
+- [项目仓库](https://github.com/maoweiming/afsimskills)
 
 ---
 
 ## 👨‍💻 关于作者
 
-我是**冯zhangwei**，来自四川成都，致力于研究**无人机大规模异构协同智能化及仿真相关技术**。
+我是**maoweimig**，来自山西，致力于研究**无人机大规模异构协同智能化及仿真相关技术**。
 
 ### 研究方向
 
@@ -665,7 +665,7 @@ afsim-script-generator/                    # AFSIM 脚本生成器 Claude Code S
 
 #### 添加微信好友
 
-<img src="assets/wechat_contact.jpg" width="300" alt="微信联系方式">
+<img src="assets/wechat_contact.png" width="300" alt="微信联系方式">
 
 *扫码添加微信，一起交流无人机仿真技术*
 *ps:最近发现新手不学习，无脑问，什么这是个什么库？这个插件怎么用？什么是claude code？这种问题，既然都用大模型了，请自己问大模型哈。公益项目，微信可以加，问题选择性回答，工作比较忙，望理解*
@@ -676,7 +676,7 @@ afsim-script-generator/                    # AFSIM 脚本生成器 Claude Code S
 
 如果这个项目对你有帮助，欢迎请我喝杯咖啡！☕
 
-<img src="assets/wechat_reward.jpg" width="300" alt="微信赞赏码">
+<img src="assets/wechat_reward.png" width="300" alt="微信赞赏码">
 
 *感谢你的支持！*
 
@@ -688,6 +688,6 @@ afsim-script-generator/                    # AFSIM 脚本生成器 Claude Code S
 
 **⭐ 如果觉得这个项目有用，请给个Star支持一下！⭐**
 
-Made with ❤️ by 冯zhangwei
+Made with ❤️ by maoweiming
 
 </div>

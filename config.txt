@@ -3,7 +3,7 @@
 # AFSIM Installation Directory
 # This is the root directory where AFSIM is installed
 # All other paths are derived from this base directory
-AFSIM_INSTALL_DIR=D:\Program Files\afsim2.9.0
+AFSIM_INSTALL_DIR=E:\AFsim\afsimgenerator\afsim2.9.0
 
 # Documentation Directory (derived from install dir)
 # This is the ultimate reference for detailed information
